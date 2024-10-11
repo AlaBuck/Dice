@@ -1,16 +1,16 @@
   int Total;
+  int r=(int)(Math.random()*256);
+  int g=(int)(Math.random()*256);
+  int b=(int)(Math.random()*256);
   void setup()
   {
       noLoop();
       size (1000,1000);
-      int r=(int)(Math.random()*256);
-      int g=(int)(Math.random()*256);
-      int b=(int)(Math.random()*256);
-      background(r,g,b);
   }
   void draw()
   {
-  Total=0;
+    background(r,g,b);
+    Total=0;
     for(int x=0; x<1000; x+=100){
       for(int y=0;y<800; y+=100) {
         Die bob = new Die(x,y);
@@ -24,7 +24,8 @@
   }
   void mousePressed()
   {
-      redraw();
+    setup() ; 
+    redraw();
   }
   class Die //models one single dice cube
   {
