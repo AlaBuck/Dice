@@ -1,5 +1,5 @@
   Die bob;
-        void setup()
+  void setup()
   {
       noLoop();
       bob = new Die(0,0);
